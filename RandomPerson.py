@@ -14,6 +14,14 @@ class RandomPerson:
     def printPerson(self):
         print(self.name + " " + self.phoneNumber + " " + self.email)
 
+    def getJSON(self):
+        d = "{phoneNumber: \""
+        d += self.phoneNumber + "\", "
+        d += "name: \"" + self.name + "\", "
+        d += "email: \"" + self.email + "\"}"
+        return d
+
 for x in xrange(1, 10):
     person = RandomPerson()
-    person.printPerson()
+    # person.printPerson()
+    print(person.getJSON())
